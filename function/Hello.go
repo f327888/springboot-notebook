@@ -21,7 +21,7 @@ func manyReturn(x, y int) (int, int) {
 func manyReturnRename(x, y int) (sum, sub int) {
 	sum = x + y
 	sub = x - y
-	return
+	return sum, sub
 }
 
 func main() {
