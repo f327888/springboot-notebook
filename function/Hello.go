@@ -6,6 +6,11 @@ func intSum(x int, y int) int {
 	return x + y
 }
 
+//返回值命名 需要加 （）
+func intSum2(x int, y int) (aa int) {
+	return x + y
+}
+
 func sayHello() {
 	fmt.Println("Hello 沙河")
 }
