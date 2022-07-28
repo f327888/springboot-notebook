@@ -22,7 +22,6 @@ func ifDemo2() {
 	if score := 115; score >= 190 {
 		fmt.Println("A")
 	} else if score > 75 {
-		//TODO 为什么进不来
 		fmt.Println("B")
 	} else {
 		fmt.Println("C")
