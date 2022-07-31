@@ -5,7 +5,16 @@ import (
 	"fmt"
 )
 
+func init2() {
+	list1 := list.List{}
+
+	fmt.Println(list1.Len())
+	back := list1.Back()
+	list1.InsertAfter(1, back) // nul
+}
+
 func main() {
+	init2()
 	lst := list.New()
 	lst.PushBack(100)
 	lst.PushBack(101)
@@ -17,4 +26,5 @@ func main() {
 		// fmt.Println(e)
 		fmt.Println(e.Value)
 	}
+
 }
