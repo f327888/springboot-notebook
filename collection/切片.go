@@ -11,6 +11,7 @@ import "fmt"
 // var 切片name []T  ,对比数组，不需要数量
 
 func main() {
+	main3()
 	// 声明切片类型
 	var a []string              //声明一个字符串切片
 	var b = []int{}             //声明一个整型切片并初始化
@@ -37,4 +38,9 @@ func main3() {
 	fmt.Println(n, err)
 	fmt.Println(len(a)) //2
 	fmt.Println(cap(a)) //10
+
+	var aa = [2]string{"aa", "bb"}
+	var bb = []string{"aa", "bb"}
+	fmt.Printf(" aa type %T \n", aa)
+	fmt.Printf(" bb type %T \n", bb)
 }

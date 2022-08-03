@@ -12,6 +12,6 @@ var (
 
 func main() {
 	fmt.Println("Please enter your full name:")
-	fmt.Scanln(&firstName, &lastName)              //Scanln() 扫描来自标准输入的文本 为什么要用 &
+	fmt.Scanln(&firstName, &lastName)              //Scanln() 扫描来自标准输入的文本 为什么要用 &, 指针，地址，而不是值。
 	fmt.Printf("Hi %s %s!\n", firstName, lastName) // Hi Chris Naegels
 }
