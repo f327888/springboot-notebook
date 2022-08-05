@@ -29,7 +29,10 @@ func main() {
 	fmt.Printf("type of a:%T\n", scoreMap)
 
 	// 如果key1存在则ok == true，否则ok为false(_ 忽略值)
-	if _, ok1 := scoreMap["张三"]; ok1 {
-
+	if _v, ok1 := scoreMap["张三"]; ok1 {
+		fmt.Println(_v)
+		fmt.Println(ok1)
+	} else {
+		fmt.Println("map not have it")
 	}
 }
