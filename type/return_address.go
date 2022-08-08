@@ -26,4 +26,7 @@ func initPerson2() *person {
 func main() {
 	fmt.Println(initPerson())  // {noname 50}
 	fmt.Println(initPerson2()) // &{noname 50}
+
+	result := 1 / 998001
+	fmt.Println(result)
 }
