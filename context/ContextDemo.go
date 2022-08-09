@@ -12,19 +12,19 @@ import (
 */
 func main() {
 	ctx, cancel := context.WithTimeout(context.Background(), 1*time.Second)
-	defer cancel()
+	defer cancel() // 取消信号 ? 取消具体做了什么？
 
 	go handle(ctx, 500*time.Millisecond)
 
 	select {
-	case <-ctx.Done():
+	case <-ctx.Done(): // 订阅 ctx.Done() 管道中的消息 1
 		fmt.Println("main", ctx.Err())
 	}
 }
 
 func handle(ctx context.Context, duration time.Duration) {
 	select {
-	case <-ctx.Done():
+	case <-ctx.Done(): // 订阅 ctx.Done() 管道中的消息 2
 		fmt.Println("handle", ctx.Err())
 	case <-time.After(duration):
 		fmt.Println("process request with", duration)
