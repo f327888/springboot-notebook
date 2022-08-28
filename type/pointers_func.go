@@ -8,6 +8,9 @@ func main() {
 	a := 4
 	squareVal(a)
 	squareAdd(&a) //TODO 没太明白, &a *int ？
+	// 类似
+	var b = &a
+	squareAdd(b)
 }
 
 func squareAdd(p *int) {
