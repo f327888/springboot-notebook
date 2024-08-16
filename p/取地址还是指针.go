@@ -17,7 +17,10 @@ func (r *Rect) size() float64 {
 
 func main() {
 	// &是取地址符号, 取到Rect类型对象的地址
-	fmt.Println(&Rect{100, 50}) // &{100 50}  ? 什么意思
+	fmt.Println(&Rect{100, 50}) // &{100 50}  有 &
+	fmt.Println(Rect{100, 50})  // {100 50}   无 &
+	//fmt.Println(*Rect{100, 50})   // 编译报错
+	fmt.Println(*(&Rect{100, 50})) // {100 50} 无 &
 
 	// *可以表示一个变量是指针类型(r是一个指针变量):
 	var r *Rect = &Rect{100, 50}
